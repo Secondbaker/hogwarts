@@ -1,5 +1,5 @@
 class Student < ApplicationRecord
-  belongs_to :House
+  belongs_to :house
 
-  validates :name presence: true
+  validates :name, presence: true
 end

@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  House: one
+  house: one
 
 two:
   name: MyString
-  House: two
+  house: two
