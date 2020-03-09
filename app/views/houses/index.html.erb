@@ -7,7 +7,6 @@
         <h2><%= house.name %></h2>
         <p>There are <%= house.students.count %> students in this house</p>
         <p>The students of this house have accumulated <%= house.points %> points</p>
-        <p>Learn more about <%= house.name %></p>
+        <p>Learn more about <%= link_to house.name, house %></p>
     <% end %>
 <% end %>
-<p>Thank to <a href = "https://github.com/faker-ruby/faker">Faker</a> for the data to populate this site</p>
