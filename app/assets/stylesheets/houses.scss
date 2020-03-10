@@ -1,3 +1,21 @@
 // Place all the styles related to the houses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {
+    background-color: #f8f8f8
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+    border: 1px solid black;
+    background-color: white;
+    padding: 1em;
+}
+
+footer {
+    margin-top: 2em;
+    font_size: 0.8em;
+    color: #555555;
+}
