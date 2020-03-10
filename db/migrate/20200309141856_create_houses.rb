@@ -3,7 +3,7 @@ class CreateHouses < ActiveRecord::Migration[6.0]
     create_table :houses do |t|
       t.string :name
       t.integer :points
-      
+
       t.timestamps
     end
   end

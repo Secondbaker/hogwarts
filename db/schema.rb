@@ -11,7 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 2020_03_09_150421) do
-
   create_table "houses", force: :cascade do |t|
     t.string "name"
     t.integer "points"
