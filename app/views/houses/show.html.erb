@@ -3,5 +3,5 @@
 <p>The students of this house have accumulated <%= @house.points %> points</p>
 <h3>Students in house <%= @house.name %></h3>
 <% @house.students.each do |student| %>
-    <p><%= student.name %></p>
+    <p><%= link_to student.name, student_path(student) %></p>
 <% end %>

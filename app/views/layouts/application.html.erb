@@ -13,7 +13,10 @@
     <div class="container">
       <header>
         <h1>Hogwarts School of Witchcraft and Wizardry</h1>
-        <p><%= link_to "Home", root_path %></p>
+        <p>
+          <%= link_to "Home", root_path %>
+          | <%= link_to "Students", students_path %>
+        </p>
       </header>
       <%= yield %>
       <footer>
