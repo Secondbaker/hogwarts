@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Student.destroy_all
+Teacher.destroy_all
 House.destroy_all
 
 NUMBER_OF_HOUSES = 5
@@ -19,5 +20,10 @@ NUMBER_OF_HOUSES.times do
 
   number_of_students.times do
     house.students.create(name: Faker::Movies::HarryPotter.unique.character)
+  end
+  number_of_teachers = rand(2..5)
+
+  number_of_teachers.times do
+    house.teachers.create(name: Faker::Movies::HarryPotter.unique.character)
   end
 end

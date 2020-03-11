@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources 'teachers', only: [:index, :show]
   # GET / => houses#index
   root to: 'houses#index'
   # can have multiple routes to the same endpoint, e.g.:  get 'houses', to: 'houses#index'

@@ -1,0 +1,11 @@
+<h2>Teachers</h2>
+<% @houses.each do |house| %>
+    <h3><%= house.name %></h3>
+    <ul>
+        <% house.teachers.each do |teacher| %>
+            <li>
+                <%= link_to teacher.name, teacher_path(teacher)  %>
+            </li>
+        <% end %>
+    </ul>
+<% end %>
