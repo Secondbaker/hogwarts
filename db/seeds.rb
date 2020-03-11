@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Appointment.destroy_all
 Student.destroy_all
 Teacher.destroy_all
 House.destroy_all
@@ -25,5 +26,13 @@ NUMBER_OF_HOUSES.times do
 
   number_of_teachers.times do
     house.teachers.create(name: Faker::Movies::HarryPotter.unique.character)
+  end
+
+  teachers_with_appointments = Teacher.all.sample(10)
+  teachers_with_appointments.each do |teacher|
+    students = Student.all.sample(rand(2..5))
+    students.each do |student|
+      Appointment.create(student: student, teacher: teacher, appointment_date: Faker::Time.forward(days: 30, period: :evening))
+    end
   end
 end
