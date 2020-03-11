@@ -1,2 +1,9 @@
 <h2><%= @teacher.name %></h2>
 <p>Belongs to House <%= link_to @teacher.house.name, @teacher.house %></p>
+</br>
+<p>Upcoming appointments:</p>
+<ul>
+    <% @teacher.appointments.each do |appointment| %>
+        <li><%= appointment.appointment_date %> with <%= link_to appointment.student.name, appointment.student %></li>
+    <% end %>
+</ul>
